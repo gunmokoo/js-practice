@@ -101,7 +101,7 @@ li:last-child {
   flex-direction: column-reverse;
   justify-content: space-around;
   align-items: center;
-  font-size: 18px;
+  font-size: 40px;
   font-weight: 700;
 }
 #weather span:last-child {
