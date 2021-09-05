@@ -1,3 +1,117 @@
+@import url("reset.css");
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700&display=swap");
 .hidden {
   display: none;
+}
+
+body {
+  width: 100%;
+  height: 100vh;
+  font-family: "Noto Sans KR", sans-serif;
+  background-position: center;
+  background-size: cover;
+  backdrop-filter: brightness(2) blur(3px);
+  padding: 50px;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+}
+#clock {
+  position: fixed;
+  right: 50px;
+  font-weight: 700;
+  font-size: 48px;
+}
+input {
+  border: 2px solid black;
+  border-radius: 5px;
+}
+input:focus {
+  outline: none;
+}
+input::placeholder {
+  color: rgba(0, 0, 0, 0.4);
+}
+.login-form__name,
+.login-form__btn {
+  padding: 24px;
+  font-size: 18px;
+}
+.login-form__btn {
+  background-color: white;
+}
+#greeting {
+  font-weight: 700;
+  font-size: 48px;
+}
+#quote {
+  padding: 100px 0px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+#quote span {
+  font-weight: 700;
+}
+#quote span:first-child {
+  padding-bottom: 25px;
+  font-size: 36px;
+}
+#quote span:last-child {
+  font-size: 24px;
+}
+main {
+  height: 300px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10vw;
+}
+main div {
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0);
+  border: 2px solid black;
+  border-radius: 5px;
+}
+#todo-form {
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.todo-form__list {
+  background-color: rgba(255, 255, 255, 0.8);
+  width: 270px;
+  padding: 15px;
+}
+li {
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: 400;
+}
+li:first-child {
+  padding-top: 20px;
+}
+li:last-child {
+  padding-bottom: 20px;
+}
+#weather {
+  display: flex;
+  flex-direction: column-reverse;
+  justify-content: space-around;
+  align-items: center;
+  font-size: 18px;
+  font-weight: 700;
+}
+#weather span:last-child {
+  font-size: 20px;
+}
+.bg {
+  position: fixed;
+  width: 100%;
+  height: 25vh;
+  left: 0px;
+  bottom: 0px;
+  background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 1));
 }
