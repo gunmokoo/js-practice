@@ -1,3 +1,3 @@
-# 바닐라 JS로 날씨 
+# JS pratice!
 
-Just JS pratice!
+- 날씨&위치 정보 받아오기
