@@ -1,7 +1,7 @@
-const names = ["a", "b", "c"];
+const abc = ["apple", "banana", "carrot"];
 
 // implicit return
-const d = names.map((item) => item + "d");
+const d = abc.map((item) => item + "d");
 
 console.log(d);
 
@@ -9,7 +9,21 @@ console.log(d);
 const e = (item) => {
   return item + "e";
 };
+const abc2 = abc.map(e);
+console.log(abc2);
 
-const names2 = names.map(e);
+// Arrow Functions Applications
+const abc3 = abc.find((item) => item.includes("b"));
+console.log(abc3);
 
-console.log(names2);
+const abc4 = abc.filter((item) => !item.includes("b"));
+console.log(abc4);
+
+const abc5 = abc.map((item) => item.split("a"));
+console.log(abc5);
+
+const abc6 = abc.map((item, index) => ({
+  fruit: item.split("a"),
+  index,
+}));
+console.table(abc6);
