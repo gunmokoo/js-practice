@@ -1,23 +1,24 @@
-// html in js
-const wrapper = document.querySelector(".wrapper");
+// css in js
 
-const addWelcome = () => {
-  const div = `
-  <div class="hello>
-    <h1 class="title">Hello</h1>
-  </div>
-  `;
-  wrapper.innerHTML = div;
+const styled = (aElement) => {
+  const el = document.createElement(aElement);
+  return (args) => {
+    const styles = args[0];
+    el.style = styles;
+    return el;
+  };
 };
 
-setTimeout(addWelcome, 2000);
-
-const abcd = ["a", "b", "c", "d"];
-
-const list = `
-    <h1>Alphabet</h1>
-    <ul>
-        ${abcd.map((abcd) => `<li>${abcd}</li>`).join(" ")}
-    </ul>
+const title = styled("h1")`
+  background-color: red;
+  color: blue;
 `;
-wrapper.innerHTML = list;
+
+const subtitle = styled("span")`
+  color: green;
+`;
+
+title.innerText = "We just coned";
+subtitle.innerText = "Styled Components";
+
+document.body.append(title, subtitle);
