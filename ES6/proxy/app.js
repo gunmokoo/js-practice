@@ -1,25 +1,12 @@
-// Proxy
+// or operator ||
 
-const userObj = {
-  username: "name",
-  age: 23,
-  password: 0000,
-};
+let a;
+const b = 0;
 
-const userFilter = {
-  get: (target, prop, receiver) => {
-    return prop === "password" ? `${"*".repeat(5)}` : target[prop];
-  },
-  set: () => {
-    console.log("Somebody wrote something");
-  },
-  delete: (target, prop) => {
-    if (prop === "password") {
-      return;
-    } else {
-      delete target[prop];
-    }
-  },
-};
+console.log(a || "Hello!");
+console.log(b || "Hi!");
 
-const filter = new Proxy(userObj, userFilter);
+// Nullish coalescing operator ?? (no iternet Explorer)
+
+console.log(a ?? "Hello!");
+console.log(b ?? "This is ??");
