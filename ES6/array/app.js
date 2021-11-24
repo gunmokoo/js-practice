@@ -36,3 +36,11 @@ console.log(email);
 
 email.fill("^".repeat("5"), 1, 2);
 console.log(email);
+
+// Array.flat()
+
+const num = [1, [[2, 3], 4, 5]];
+console.log(num);
+console.log(num.flat());
+console.log(num.flat(2));
+console.log(num.flat(3));
