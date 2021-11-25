@@ -72,10 +72,16 @@ const f = Promise.race([f1, f2, f3]);
 
 f.then((result) => console.log(result));
 
-//
+// Promise
 
 const g = new Promise((resolve) => {
   setTimeout(resolve, 10000, "Hi!");
 })
   .then((value) => console.log(value))
   .finally(() => console.log("Finally!"));
+
+// Promise.allSettled
+
+const h = Promise.allSettled(fetch(url), fetch(url), fetch(url), fetch(url))
+  .then((res) => console.log(res))
+  .catch((error) => console.log(error));
