@@ -44,3 +44,25 @@ console.log(num);
 console.log(num.flat());
 console.log(num.flat(2));
 console.log(num.flat(3));
+
+// Araay.sort()
+
+const alpha = ["a", "d", "e", "b", "c"];
+console.log(alpha.sort());
+
+const fruits = ["apple", "strawberry", "avocado"];
+console.log(fruits.sort((a, b) => a.length - b.length));
+console.log(fruits.sort((a, b) => b.length - a.length));
+
+const product = [
+  {
+    name: "a",
+    year: 2012,
+  },
+  {
+    name: "b",
+    year: 2021,
+  },
+];
+console.log(product.sort((a, b) => a.year - b.year));
+console.log(product.sort((a, b) => b.year - a.year));
