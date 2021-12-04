@@ -9,9 +9,9 @@ for (let i = 0; i < 26; i++) {
 }
 const onClick = (event) => {
   event.preventDefault();
-  const arr = input.value.split("");
-  for (let i = 0; i < arr.length; i++) {
-    const key = arr[i].charCodeAt() - 97;
+  alphabet.fill(-1, 0);
+  for (let i = 0; i < input.value.length; i++) {
+    const key = input.value[i].charCodeAt() - 97;
     if (alphabet[key] === -1) {
       alphabet[key] = i;
     }

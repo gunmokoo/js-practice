@@ -16,10 +16,9 @@ const onClick = (event) => {
       : 10 * (one.value - 1);
   const differenceNum = one.value / unit ? 0 : one.value / unit;
   if (differenceNum === 0) {
-    const num = String(two.value).split("");
     let sum = 0;
     for (let i = 0; i < one.value; i++) {
-      sum += parseInt(num[i]);
+      sum += parseInt(two.value[i]);
     }
     console.log(sum);
   } else {
